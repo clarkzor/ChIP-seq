@@ -6,6 +6,9 @@
 #SBATCH -error=slurm-%J.err ##Error file
 #SBATCH -t 12:00:00
 
+conda activate HOMER
+conda init bash
+
 PEAKS=/dfs7/mbt/nymar/paper_2025/fig1/peaks_1D/St105_ezh2-unique.filtered.sorted.bed
 FASTA=/dfs10/bio/clarklh/RNA_Seq/ReferenceGenome/XENTR_10.0_genome.fasta
 GFF3=/dfs10/bio/clarklh/RNA_Seq/ReferenceGenome/XENTR_10.0_Xenbase.gtf
