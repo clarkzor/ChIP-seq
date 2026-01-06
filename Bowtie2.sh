@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH -A 
 #SBATCH -p standard
-#SBATCH --nodes=2 ##number of nodes to use
+#SBATCH --nodes=1 ##number of nodes to use
 #SBATCH --cpus-per-task=15 ##number of cores to use per node
 #SBATCH -error=slurm-%J.err ##Error file
 
