@@ -8,6 +8,7 @@
 #SBATCH -t 12:00:00
 module load bedtools2
 
+INPUT=/dfs10/bio/clarklh/New_ChIP/IDR/Intersect/Grhl1_vs_Foxi2_vsSox3_vsEp300AC-Amina_St105.narrowPeak
+SORTED_OUTPUT=/dfs10/bio/clarklh/New_ChIP/IDR/Grhl1_vs_Foxi2_vsSox3_vsEp300AC-Amina_St105.sorted.bed
 
-
-sortBed -i /dfs10/bio/clarklh/New_ChIP/IDR/Intersect/Grhl1_vs_Foxi2_vsSox3_vsEp300AC-Amina_St105.narrowPeak > /dfs10/bio/clarklh/New_ChIP/IDR/Grhl1_vs_Foxi2_vsSox3_vsEp300AC-Amina_St105.sorted.bed
+sortBed -i $INPUT > $SORTED_OUTPUT
