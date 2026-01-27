@@ -10,6 +10,5 @@ conda init bash
 
 TAGDIR=/dfs10/bio/clarklh/New_ChIP/Grhl1_tagDir/
 
-
 makeUCSCfile $TAGDIR -o auto
 
