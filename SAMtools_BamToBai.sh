@@ -12,4 +12,7 @@
 
 module load samtools
 
-samtools index /dfs10/bio/clarklh/EP300_ChIP/FS_MO/Aligned/P300_FSmo_St105_AC_Pooled_rmdup_sorted.bam /dfs10/bio/clarklh/EP300_ChIP/FS_MO/Aligned/P300_FSmo_St105_AC_Pooled_rmdup_sorted.bai
+BAM_TO_INDEX=/dfs10/bio/clarklh/EP300_ChIP/FS_MO/Aligned/P300_FSmo_St105_AC_Pooled_rmdup_sorted.bam
+INDEX=/dfs10/bio/clarklh/EP300_ChIP/FS_MO/Aligned/P300_FSmo_St105_AC_Pooled_rmdup_sorted.bai
+
+samtools index $BAM_TO_INDEX $INDEX
