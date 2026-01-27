@@ -6,7 +6,6 @@
 #SBATCH -error=slurm-%J.err ##Error file
 #SBATCH -t 12:00:00
 
-
 cd /dfs10/bio/clarklh/New_RNA/
 
 gunzip DMSO*
