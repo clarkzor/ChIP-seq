@@ -10,7 +10,7 @@ module load anaconda
 module load miniconda3
 module load bioconda
 
-conda activate IDR_3
+conda activate IDR
 conda init bash
 
 IDR_THRESH=0.05
@@ -26,8 +26,6 @@ REP1_VS_REP2=/dfs10/bio/clarklh/New_ChIP/IDR/Grhl1_Pooled_R1_vs_R2
 # ============================================================================#
 
 idr --samples ${REP1_PEAK_FILE} ${REP2_PEAK_FILE} --peak-list ${POOLED_PEAK_FILE} --input-file-type narrowPeak --output-file ${IDR_OUTPUT} --rank signal.value --soft-idr-threshold ${IDR_THRESH} --plot
-
-
 
 # =====================================#
 # Get peaks passing IDR threshold of 5%#
