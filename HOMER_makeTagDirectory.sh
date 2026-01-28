@@ -17,4 +17,3 @@ ALIGNMENT=/dfs10/bio/clarklh/New_ChIP/Foxi1_ChIP_Pooled_rmdup.sorted.bed
 TAGDIR=/dfs10/bio/clarklh/New_ChIP/Foxi1_tagDir/
 
 makeTagDirectory $TAGDIR -format bed -forceBED $ALIGNMENT
-
