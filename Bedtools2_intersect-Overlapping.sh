@@ -13,9 +13,9 @@ module load bedtools2
 
 QUERY=/dfs7/mbt/nymar/paper_2025/fig1/peaks_1D/intersect/Ezh2_Foxh1_St105_Shared_vs_H3K27me3_VG_real.bed
 TARGET=/dfs7/mbt/nymar/paper_2025/fig1/peaks_1D/intersect/Ezh2_Foxh1_St105_Shared_vs_H3K27me3_AC_real.bed
-OUTPUT=/dfs7/mbt/nymar/paper_2025/fig1/peaks_1D/intersect/Ezh2_Foxh1_St105_Shared_vs_H3K27me3_AC_VS_VG_real.bed
+OVERLAPPING_OUTPUT=/dfs7/mbt/nymar/paper_2025/fig1/peaks_1D/intersect/Ezh2_Foxh1_St105_Shared_vs_H3K27me3_AC_VS_VG_real.bed
 
 bedtools intersect -wa\
  -a $QUERY \
  -b $TARGET \
- > $OUTPUT
+ > $OVERLAPPING_OUTPUT
