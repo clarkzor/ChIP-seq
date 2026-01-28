@@ -5,7 +5,6 @@
 #SBATCH --cpus-per-task=5 ##number of cores to use per node
 #SBATCH -error=slurm-%J.err ##Error file
 
-
 module load bowtie2
 
 index=/dfs5/bio/clarklh/FoxH1_MO_WithSneha/XtropV10_Index/XtropV10
