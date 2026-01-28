@@ -16,9 +16,9 @@ module load deeptools
 # single read, ChIP_READ as .fastq, BOWTIE2_INDEX_NAME without suffix, macs2 p-value 0.001
 
 BOWTIE2_INDEX_NAME=/dfs10/bio/clarklh/RNA_Seq/ReferenceGenome/Alignment_Indexes/XT-V10_0_Bowtie2/XT-V10_0
-ChIP_READ1=/dfs7/mbt/choj1/from-dfs1/chip/Ezh2_2020/raw/nR161-L3-G5-P037-st9-Ezh2-Foxh1mut2-TCCGGAGA-GCCTCTAT-READ1.fastq
-ChIP_READ2=/dfs7/mbt/choj1/from-dfs1/chip/Ezh2_2020/raw/nR161-L3-G5-P037-st9-Ezh2-Foxh1mut2-TCCGGAGA-GCCTCTAT-READ2.fastq
-OUTPUT_NAME=/dfs7/mbt/nymar/paper_2025/Realignment/EZH2_St9_FMO_RepX
+ChIP_READ1=/dfs7/mbt/choj1/from-dfs1/chip/Ezh2_2020/raw/st9-Ezh2-Foxh1mut2-READ1_Replicate1.fastq
+ChIP_READ2=/dfs7/mbt/choj1/from-dfs1/chip/Ezh2_2020/raw/st9-Ezh2-Foxh1mut2-READ2_Replicate1.fastq
+OUTPUT_NAME=/dfs7/mbt/nymar/paper_2025/Realignment/EZH2_St9_FMO_Rep1
 
 bowtie2 -q -x $BOWTIE2_INDEX_NAME -1 $ChIP_READ1 -2 $ChIP_READ2 -S ${OUTPUT_NAME}.sam
 
