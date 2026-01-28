@@ -12,34 +12,19 @@
 #3) Need to run computeMatrix using gene.bed's regions, TF scores
 #4) Need to finally run this script's plotProfile to generate the bindingprofile figure of TF->Genes
 
-
-#--plotWidth 7
-#--plotHeight 6
-
 module load deeptools
 module load anaconda
 
 MATRIX=/dfs7/mbt/nymar/paper_2025/fig3/profile_plot_3C/ReviewerPlots/St105_ezh2-foxh1_VG-genes_20kb_H3K27me3_VG-nathan_WT-Foxh1MutSignal-UNscaled.sh
 OUTPUT=/dfs7/mbt/nymar/paper_2025/fig3/profile_plot_3C/ReviewerPlots/St105_ezh2-foxh1_VG-genes_20kb_H3K27me3_VG-nathan_WT-Foxh1MutSignal-UNscaled.png
+WIDTH=7
+HEIGHT=6
+COLOR1="#f97a35"
+COLOR2="#765b73"
+SIGNAL_MAX=200
+SIGNAL_MIN=0
 
-plotProfile --matrixFile $MATRIX --outFileName $OUTPUT --perGroup  --colors "#f97a35" "#765b73" --plotType "fill" --legendLocation "upper-right" #--yMax 200 --yMin 0
-
-#'#c28a08' 
-#ORANGES FOR H3K4me1 -  '#45433f' '#c28a08' '#ebab17' 
-#GREENS FOR H3K27ac -  '#064202'  '#2d9426' "#9ad197"
-
-
-# --samplesLabel " "
-
-##739a71
-
-##8aedbb
-
-
-# "white, #418003"
-
-##a7a8a5 light gray
-
+plotProfile --matrixFile $MATRIX --outFileName $OUTPUT --perGroup --colors $COLOR1 $COLOR2 --plotType "fill" --legendLocation "upper-right" --yMax $SIGNAL_MAX --yMin $SIGNAL_MIN --plotHeight $HEIGHT --plotWidth $WIDTH
 #"#418003" green
 
  #"#f23f16" "#2a6af5"
