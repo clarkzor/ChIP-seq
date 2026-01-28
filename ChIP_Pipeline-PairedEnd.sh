@@ -20,10 +20,6 @@ ChIP_READ1=/dfs7/mbt/choj1/from-dfs1/chip/Ezh2_2020/raw/nR161-L3-G5-P037-st9-Ezh
 ChIP_READ2=/dfs7/mbt/choj1/from-dfs1/chip/Ezh2_2020/raw/nR161-L3-G5-P037-st9-Ezh2-Foxh1mut2-TCCGGAGA-GCCTCTAT-READ2.fastq
 OUTPUT_NAME=/dfs7/mbt/nymar/paper_2025/Realignment/EZH2_St9_FMO_RepX
 
-#-2 $ChIP_READ2
-
-# -U $ChIP_READ1
-
 bowtie2 -q -x $BOWTIE2_INDEX_NAME -1 $ChIP_READ1 -2 $ChIP_READ2 -S ${OUTPUT_NAME}.sam
 
 samtools view -b ${OUTPUT_NAME}.sam -o ${OUTPUT_NAME}.bam
@@ -34,4 +30,6 @@ samtools sort -o ${OUTPUT_NAME}_rmdup_sort.bam -O bam ${OUTPUT_NAME}_rmdup.bam
 
 samtools index ${OUTPUT_NAME}_rmdup_sort.bam ${OUTPUT_NAME}_rmdup_sort.bai
 
-#bamCoverage -b ${OUTPUT_NAME}_rmdup_sort.bai -o ${OUTPUT_NAME}_rmdup_sort.bw --effectiveGenomeSize 1100000000 --binSize 50 --normalizeUsing RPKM
+bamCoverage -b ${OUTPUT_NAME}_rmdup_sort.bai -o ${OUTPUT_NAME}_rmdup_sort.bw --effectiveGenomeSize 1100000000 --binSize 50 --normalizeUsing RPKM
+
+samtools bamtobed -i ${OUTPUT_NAME}_rmdup_sort.bam > ${OUTPUT_NAME}_rmdup_sort.bed
