@@ -6,7 +6,6 @@
 #SBATCH --cpus-per-task=15 ##number of cores to use per node
 #SBATCH -error=slurm-%J.err ##Error file
 
-
 conda activate HOMER
 conda init bash
 
@@ -17,6 +16,3 @@ MOTIF=/dfs10/bio/clarklh/Homer_Motifs/V10_Analysis/Foxi2_St8-105_CombPeaks/Foxi2
 MOTIF_BED=/dfs10/bio/clarklh/Foxi2_ChIP/Bedtools/V10_0-Analysis/Intersect/FindMotifOccurrence/Foxf1Motif_Foxi2St8-10-SharedPeakMotifLocation.bed
 
 annotatePeaks.pl $PEAKS $GENOME -size 2000 -hist 20 -ghist -m $MOTIF -mbed $MOTIF_BED > $OUTPUT
-
-#annotatePeaks.pl $PEAKS $GENOME -size 2000 -m $MOTIF -mbed $MOTIF_BED > $OUTPUT 
-
