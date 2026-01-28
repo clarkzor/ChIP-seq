@@ -13,7 +13,7 @@ TARGET=/dfs7/mbt/nymar/data/H3K27me3/gtf_gene_EZH2-Foxh1_AC.tsv
 OUTPUT=/dfs7/mbt/nymar/data/H3K27me3/Intersect/EZH2-Foxh1-ACGenebody_H3K27me3-AC-C.bed
 
 
-bedtools intersect -C\
+bedtools intersect -C \
  -abam $QUERY \
  -b $TARGET -bed \
  > $OUTPUT
