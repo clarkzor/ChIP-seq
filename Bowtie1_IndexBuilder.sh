@@ -6,8 +6,8 @@
 #SBATCH --cpus-per-task=15 ##number of cores to use per node
 #SBATCH -error=slurm-%J.err ##Error file
 
-#Build a bowtie2 index for your reference genome .fasta file
-#Can skip this step if you have already made a bowtie2 index for your genome before
+#Build a bowtie1 index for your reference genome .fasta file
+#Can skip this step if you have already made a bowtie1 index for your genome before
 #first file is your genome.fasta
 #second file is directory with index files
 
