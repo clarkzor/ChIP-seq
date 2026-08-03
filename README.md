@@ -236,7 +236,3 @@ scripts/
 ```
 
 This preserves analysis provenance while providing future lab members with scripts that are easier to adapt to new ChIP-seq experiments.
-
-## Author
-
-Analysis workflows developed for chromatin and transcription-factor studies in *Xenopus tropicalis* using the HPC3 computing environment.
