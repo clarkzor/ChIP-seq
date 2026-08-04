@@ -1,0 +1,56 @@
+original_file,reusable_template,status,notes
+Bedtools2_BamToBed(1).sh,scripts/03_bam_bed_processing/bedtools_bam_to_bed.sh,cleaned,Hard-coded BAM/BED paths replaced with variables.
+Bedtools2_BedSorter.sh,scripts/03_bam_bed_processing/sort_bed.sh,cleaned,Standardized sortBed template.
+Bedtools2_BedSorter_forLoop.sh,scripts/03_bam_bed_processing/sort_bed_loop.sh,cleaned,Generalized directory/glob loop.
+Bedtools2_BedToBam.sh,scripts/03_bam_bed_processing/bedtools_bed_to_bam.sh,cleaned,Genome file moved to shared reference config.
+Bedtools2_GenomeFileMaker.sh,scripts/10_utilities/create_genome_file_from_fai.sh,corrected,Historical command did not create a BEDTools genome file; reusable version derives name/length columns from FASTA .fai.
+Bedtools2_GetFastaFromRegion.sh,scripts/06_interval_analysis/bedtools_getfasta.sh,cleaned,Reference FASTA moved to config.
+Bedtools2_RandomRegionGenerator.sh,scripts/06_interval_analysis/bedtools_random_regions.sh,corrected,Fixed REGION_LENGTH variable-name mismatch.
+Bedtools2_closestBed-filter_forLoop.sh,scripts/06_interval_analysis/filter_closest_gene_rows_loop.sh,review_required,Generalized loop; GFF/GTF field condition should be confirmed for each annotation format.
+Bedtools2_closestBed_forLoop.sh,scripts/06_interval_analysis/bedtools_closest_features_loop.sh,cleaned,Generalized input pattern/output directory and annotation path.
+Bedtools2_intersect-Nonoverlapping.sh,scripts/06_interval_analysis/bedtools_intersect_nonoverlap.sh,cleaned,Reusable -v intersection template.
+Bedtools2_intersect-Overlapping.sh,scripts/06_interval_analysis/bedtools_intersect_overlap.sh,cleaned,Reusable -wa overlap template.
+Bedtools2_intersect-QuantifyOverlaps.sh,scripts/06_interval_analysis/bedtools_intersect_count_overlaps.sh,cleaned,Reusable count-overlap template.
+Bedtools2_slop_PrintFasta (1).sh,scripts/06_interval_analysis/bedtools_slop_regions.sh,duplicate,Duplicate of Bedtools2_slop_PrintFasta.sh; consolidated.
+Bedtools2_slop_PrintFasta.sh,scripts/06_interval_analysis/bedtools_slop_regions.sh,cleaned,Reusable summit/region extension template.
+Bowtie1_Alignment-PairedEnd.sh,scripts/02_reference_and_alignment/bowtie1_align_paired_end.sh,corrected,Filled missing input pattern and standardized Bowtie1 paired-end syntax.
+Bowtie1_Alignment_SingleEnd.sh,scripts/02_reference_and_alignment/bowtie1_align_single_end.sh,corrected,Fixed malformed output/redirection syntax.
+Bowtie1_IndexBuilder.sh,scripts/02_reference_and_alignment/bowtie1_build_index.sh,cleaned,Index prefix and FASTA moved to config.
+Bowtie2_Alignment-SingleEnd.sh,scripts/02_reference_and_alignment/bowtie2_align_single_end.sh,corrected,Added -U for single-end reads and explicit output.
+Bowtie2_IndexBuilder.sh,scripts/02_reference_and_alignment/bowtie2_build_index.sh,corrected,"Corrected bowtie2-build argument order: reference first, index prefix second."
+Cat_forLoop.sh,scripts/03_bam_bed_processing/concatenate_replicate_beds.sh,cleaned,Generalized replicate list and input directory.
+ChIP_Pipeline-PairedEnd-forLoop.sh,scripts/workflows/chipseq_paired_end_loop.sh,corrected,Fixed bedtools conversion; removed deprecated duplicate-removal assumption from reusable workflow.
+ChIP_Pipeline-PairedEnd.sh,scripts/workflows/chipseq_paired_end.sh,corrected,"Fixed bamCoverage input (BAM, not BAI) and bedtools conversion."
+ChIP_Pipeline-SingleEnd_forLoop.sh,scripts/workflows/chipseq_single_end_loop.sh,corrected,Fixed bedtools conversion and separated duplicate-handling choice.
+FastQC (1).sh,scripts/01_qc/fastqc.sh,cleaned,Generalized input/output and thread usage.
+FastaToGenome (1).sh,scripts/10_utilities/create_genome_file_from_fai.sh,corrected,"Historical code parsed a .fai as if it were FASTA; replaced with cut -f1,2."
+FileLineNumberUtility.sh,scripts/10_utilities/view_file_with_line_numbers.sh,cleaned,Converted hard-coded less command into positional-argument utility.
+Gunzipper (1).sh,scripts/10_utilities/gunzip_matching_files.sh,cleaned,Generalized directory and glob.
+HOMER_AnnotatePeak.sh,scripts/08_motif_and_annotation/homer_annotate_peaks.sh,cleaned,Paths/config generalized; removed conda init from batch job.
+HOMER_BedGraphUCSC.sh,scripts/08_motif_and_annotation/homer_make_ucsc_file.sh,cleaned,Tag directory parameterized; removed conda init.
+HOMER_FindMotifOccurrence.sh,scripts/08_motif_and_annotation/homer_find_motif_occurrence.sh,cleaned,"Motif, peaks, outputs, and genome generalized."
+HOMER_findMotifsGenome.sh,scripts/08_motif_and_annotation/homer_find_motifs_genome.sh,corrected,Fixed region-size variable mismatch.
+HOMER_makeTagDirectory.sh,scripts/08_motif_and_annotation/homer_make_tag_directory.sh,cleaned,Generalized paths; removed conda init.
+IrreproducibleDiscoveryRate_Analysis.sh,scripts/05_reproducibility/idr_analysis.sh,cleaned,Generalized replicate/pooled inputs and retained threshold extraction logic.
+MACS2_callpeak-Broad.sh,scripts/04_peak_calling/macs2_callpeak_broad.sh,cleaned,Generalized ChIP/control/output/genome size.
+MACS2_callpeak-Narrow.sh,scripts/04_peak_calling/macs2_callpeak_narrow.sh,cleaned,Generalized ChIP/control/output/genome size.
+MD5sum (1).sh,scripts/01_qc/md5sum.sh,cleaned,Generalized input and checksum output.
+RankOrderedSuperEnhancer_Analysis(1).sh,scripts/09_regulatory_analysis/rose_super_enhancer_analysis_legacy.sh,legacy,Preserved as a clearly labeled Python-2-era ROSE template.
+SAMtools_BamSorter(1).sh,scripts/03_bam_bed_processing/samtools_sort_bam.sh,cleaned,Generalized paths and threads.
+SAMtools_BamToBai(1).sh,scripts/03_bam_bed_processing/samtools_index_bam.sh,cleaned,Generalized paths and threads.
+SAMtools_DupeRemoverBam(1).sh,scripts/03_bam_bed_processing/remove_duplicate_bed_coordinates.sh,corrected,"Original input was narrowPeak, not BAM; reusable version performs interval-coordinate deduplication."
+SAMtools_RandomSubsample_BamSplitter(1).sh,scripts/03_bam_bed_processing/samtools_subsample_bam.sh,review_required,Generalized; samtools -s semantics should be confirmed for installed version.
+SAMtools_bamMerger(1).sh,scripts/03_bam_bed_processing/samtools_merge_bams.sh,corrected,Removed incorrect -b use; -b expects a text file listing BAMs.
+SRAToolkit_FastqDump(1).sh,scripts/10_utilities/sra_fastq_dump.sh,cleaned,Generalized SRA accession/output directory.
+ShuffledLineSplitter(1).sh,scripts/10_utilities/split_shuffled_lines.sh,cleaned,"Generalized source, prefix, and chunk size."
+awk_DupeRemoverBed(1).sh,scripts/03_bam_bed_processing/remove_duplicate_bed_coordinates.sh,cleaned,Reusable coordinate-based BED deduplication.
+awk_FastaSplitter(1).sh,scripts/10_utilities/split_fasta_records.sh,corrected,Original comment said base-pair chunks but logic split by FASTA records; reusable version explicitly splits records.
+deepTools_BigWigScaler(1).sh,scripts/07_signal_and_visualization/deeptools_bigwig_scale.sh,cleaned,Generalized input/output and scale factor.
+deepTools_CountsOverBinnedGenome(1).sh,scripts/07_signal_and_visualization/deeptools_multibam_summary_bins.sh,cleaned,Generalized BAM inputs and outputs.
+deepTools_Heatmap(1).sh,scripts/07_signal_and_visualization/deeptools_plot_heatmap.sh,corrected,Matrix path uses expected matrix .gz convention rather than .sh.
+deepTools_Heatmap-Kmeans_forLoop(1).sh,scripts/07_signal_and_visualization/deeptools_plot_heatmap_kmeans.sh,corrected,Simplified robust k-means loop; removed fragile dynamically generated region labels.
+deepTools_PlotProfile(1).sh,scripts/07_signal_and_visualization/deeptools_plot_profile.sh,corrected,Matrix path uses expected .gz convention and plotting options are parameterized.
+deepTools_bamCoverage-bw(1).sh,scripts/07_signal_and_visualization/deeptools_bamcoverage.sh,cleaned,"Generalized BAM, output, normalization, and scale factor."
+deepTools_computeMatrix_ReferencePoint(1).sh,scripts/07_signal_and_visualization/deeptools_compute_matrix_reference_point.sh,corrected,BigWigs represented as an array and matrix output uses .gz.
+deepTools_computeMatrix_ScaleRegions(1).sh,scripts/07_signal_and_visualization/deeptools_compute_matrix_scale_regions.sh,corrected,BigWigs represented as an array and matrix output uses .gz.
+grep_MTremover(1).sh,scripts/10_utilities/remove_mito_regions.sh,corrected,Removed stray trailing backslash and generalized mitochondrial prefix.
