@@ -1,0 +1,56 @@
+file	status
+Bedtools2_BamToBed(1).sh	IDENTICAL
+Bedtools2_BedSorter.sh	IDENTICAL
+Bedtools2_BedSorter_forLoop.sh	IDENTICAL
+Bedtools2_BedToBam.sh	IDENTICAL
+Bedtools2_GenomeFileMaker.sh	IDENTICAL
+Bedtools2_GetFastaFromRegion.sh	IDENTICAL
+Bedtools2_RandomRegionGenerator.sh	IDENTICAL
+Bedtools2_closestBed-filter_forLoop.sh	IDENTICAL
+Bedtools2_closestBed_forLoop.sh	IDENTICAL
+Bedtools2_intersect-Nonoverlapping.sh	IDENTICAL
+Bedtools2_intersect-Overlapping.sh	IDENTICAL
+Bedtools2_intersect-QuantifyOverlaps.sh	IDENTICAL
+Bedtools2_slop_PrintFasta (1).sh	IDENTICAL
+Bedtools2_slop_PrintFasta.sh	IDENTICAL
+Bowtie1_Alignment-PairedEnd.sh	IDENTICAL
+Bowtie1_Alignment_SingleEnd.sh	IDENTICAL
+Bowtie1_IndexBuilder.sh	IDENTICAL
+Bowtie2_Alignment-SingleEnd.sh	IDENTICAL
+Bowtie2_IndexBuilder.sh	IDENTICAL
+Cat_forLoop.sh	IDENTICAL
+ChIP_Pipeline-PairedEnd-forLoop.sh	IDENTICAL
+ChIP_Pipeline-PairedEnd.sh	IDENTICAL
+ChIP_Pipeline-SingleEnd_forLoop.sh	IDENTICAL
+FastQC (1).sh	IDENTICAL
+FastaToGenome (1).sh	IDENTICAL
+FileLineNumberUtility.sh	IDENTICAL
+Gunzipper (1).sh	IDENTICAL
+HOMER_AnnotatePeak.sh	IDENTICAL
+HOMER_BedGraphUCSC.sh	IDENTICAL
+HOMER_FindMotifOccurrence.sh	IDENTICAL
+HOMER_findMotifsGenome.sh	IDENTICAL
+HOMER_makeTagDirectory.sh	IDENTICAL
+IrreproducibleDiscoveryRate_Analysis.sh	IDENTICAL
+MACS2_callpeak-Broad.sh	IDENTICAL
+MACS2_callpeak-Narrow.sh	IDENTICAL
+MD5sum (1).sh	IDENTICAL
+RankOrderedSuperEnhancer_Analysis(1).sh	IDENTICAL
+SAMtools_BamSorter(1).sh	IDENTICAL
+SAMtools_BamToBai(1).sh	IDENTICAL
+SAMtools_DupeRemoverBam(1).sh	IDENTICAL
+SAMtools_RandomSubsample_BamSplitter(1).sh	IDENTICAL
+SAMtools_bamMerger(1).sh	IDENTICAL
+SRAToolkit_FastqDump(1).sh	IDENTICAL
+ShuffledLineSplitter(1).sh	IDENTICAL
+awk_DupeRemoverBed(1).sh	IDENTICAL
+awk_FastaSplitter(1).sh	IDENTICAL
+deepTools_BigWigScaler(1).sh	IDENTICAL
+deepTools_CountsOverBinnedGenome(1).sh	IDENTICAL
+deepTools_Heatmap(1).sh	IDENTICAL
+deepTools_Heatmap-Kmeans_forLoop(1).sh	IDENTICAL
+deepTools_PlotProfile(1).sh	IDENTICAL
+deepTools_bamCoverage-bw(1).sh	IDENTICAL
+deepTools_computeMatrix_ReferencePoint(1).sh	IDENTICAL
+deepTools_computeMatrix_ScaleRegions(1).sh	IDENTICAL
+grep_MTremover(1).sh	IDENTICAL
